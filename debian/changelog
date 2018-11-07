@@ -1,3 +1,9 @@
+eta-calibrator (0.1.1) unstable; urgency=medium
+
+  * UI enhancements
+
+ -- Hikmet Baş <hikmet.bas@pardus.org.tr>  Wed, 07 Nov 2018 14:08:38 +0000
+
 eta-calibrator (0.1.0) unstable; urgency=medium
 
   * Initial release.
