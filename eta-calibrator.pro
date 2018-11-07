@@ -5,8 +5,7 @@ CONFIG += c++11
 
 SOURCES += src/main.cpp \
     src/bridge.cpp \
-    src/singleinstance.cpp #\
-    #src/detectiwb.cpp
+    src/singleinstance.cpp
 
 RESOURCES += qml.qrc
 
@@ -14,8 +13,7 @@ QML_IMPORT_PATH =
 
 HEADERS += \
     src/bridge.h \
-    src/singleinstance.h #\
-    #src/detectiwb.h
+    src/singleinstance.h
 
 TARGET = eta-calibrator
 
