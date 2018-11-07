@@ -27,6 +27,3 @@ desktop_file.files = eta-calibrator.desktop
 desktop_file.path = /usr/share/applications/
 
 INSTALLS += target icon desktop_file
-
-#LIBS += -lusb
-
