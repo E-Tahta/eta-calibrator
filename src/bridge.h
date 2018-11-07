@@ -22,14 +22,30 @@
 #define BRIDGE_H
 
 #include <QObject>
+#include <QStringList>
+#include <QString>
 
 class Bridge : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString device READ device WRITE setDevice
+               NOTIFY saved
+               NOTIFY deviceChanged)
 public:
     explicit Bridge(QObject *parent = 0);
     ~Bridge();
+    QString device() const;
+    void setDevice(const QString &dev);
+    Q_INVOKABLE QStringList getDeviceList() const;
+    Q_INVOKABLE void runCalibrator();
+    Q_INVOKABLE void makeCalibrationPermanent();
+private:
+    QStringList parseOutput(const QString &s) const;
+    QString m_device;
 
+signals:
+    void deviceChanged();
+    void saved();
 };
 
 #endif // BRIDGE_H
