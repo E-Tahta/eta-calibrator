@@ -1,0 +1,21 @@
+Source: eta-calibrator
+Section: utils
+Priority: optional
+Maintainer: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+Build-Depends: debhelper (>= 9), libqt5widgets5, libqt5svg5-dev, libusb-dev, qtbase5-dev, qtdeclarative5-dev
+Standards-Version: 3.9.6
+Homepage: http://pardus.org.tr
+
+Package: eta-calibrator
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+    libqt5svg5,
+    libusb-dev,
+    qml-module-qtquick-controls, 
+    qml-module-qtquick-window2, 
+    qml-module-qtquick2,
+    xinput-calibrator (>> 0.7.5+git20140201-1)
+Description: Etkileşimli Tahta Arayüzü Kalibrasyon Programı
+ Bazı tahtalarda sonradan oluşan dokunmatik kalibrasyon
+ bozukluğunu xinput kullanarakgidermek için hazırlanmıç
+ bir program.

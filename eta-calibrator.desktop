@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Eta-Calibrator
+Name[tr]=Eta Kalibrasyon
+Type=Application
+Comment=Interactive White Board Calibration Tool
+Comment[tr]=Etkileşimli Tahta Kalibrasyon Aracı
+Terminal=false
+Exec=/usr/bin/eta-calibrator
+Icon=/usr/share/eta/eta-calibrator/icon/eta-calibrator.svg
+Categories=Qt;System;Settings;
+GenericName=Interactive White Board Calibration Tool
+GenericName[tr]=Etkileşimli Tahta Kalibrasyon Aracı
+
