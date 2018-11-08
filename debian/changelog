@@ -1,3 +1,18 @@
+eta-calibrator (0.1.2) unstable; urgency=medium
+
+  [ Yunusemre Şentürk ]
+  * Add IWB detection and update signals
+
+  [ Hikmet Baş ]
+  * Prepare UI for backend
+
+  [ Yunusemre Şentürk ]
+  * Fix treshold value
+  * Add timer for after succes save
+  * Fix device number issue
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Thu, 08 Nov 2018 14:40:04 +0300
+
 eta-calibrator (0.1.1) unstable; urgency=medium
 
   * UI enhancements
