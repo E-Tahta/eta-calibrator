@@ -111,6 +111,7 @@ ApplicationWindow {
                 onClicked: {
                     messageText.visible = false
                     bridge.runCalibrator()
+                    timer.stop()
                 }
             }
         }
@@ -196,6 +197,7 @@ ApplicationWindow {
         messageText.color = main.successColor
         messageText.text = main.saveSuccessMessage
         txtRunButton.text = main.retryRunButtonText
+        timer.start()
     }
 
 
@@ -247,6 +249,15 @@ ApplicationWindow {
             messageText.color = main.failColor
             messageText.text = main.deviceNotFound
 
+        }
+    }
+
+    Timer {
+        id: timer
+        interval: 5000
+        running: false
+        onTriggered: {
+            main.close()
         }
     }
 
