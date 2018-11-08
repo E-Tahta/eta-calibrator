@@ -44,9 +44,9 @@ int main(int argc, char *argv[])
         return 0;
     }
     if (cInstance.listen(name)) {
-        qDebug() << "creating single instance";
+        qDebug() << "Creating single instance";
     } else {
-        qDebug() << "couldnt create single instance aborting";
+        qDebug() << "Couldn't create single instance aborting";
         return 0;
     }
 

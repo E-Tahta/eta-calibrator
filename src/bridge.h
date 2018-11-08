@@ -29,23 +29,33 @@ class Bridge : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString device READ device WRITE setDevice
-               NOTIFY saved
                NOTIFY deviceChanged)
+    Q_PROPERTY(bool iwb READ iwb)
+    Q_PROPERTY(NOTIFY calibrationSuccess)
+    Q_PROPERTY(NOTIFY calibrationFailed)
+    Q_PROPERTY(NOTIFY savingSuccess)
+    Q_PROPERTY(NOTIFY savingFailed)
 public:
     explicit Bridge(QObject *parent = 0);
     ~Bridge();
     QString device() const;
+    bool iwb() const;
     void setDevice(const QString &dev);
     Q_INVOKABLE QStringList getDeviceList() const;
     Q_INVOKABLE void runCalibrator();
     Q_INVOKABLE void makeCalibrationPermanent();
 private:
     QStringList parseOutput(const QString &s) const;
+    void deletePreviousConfig();
     QString m_device;
-
+    bool m_iwb;
 signals:
     void deviceChanged();
-    void saved();
+    void calibrationSuccess();
+    void calibrationFailed();
+    void savingSuccess();
+    void savingFailed();
+
 };
 
 #endif // BRIDGE_H
