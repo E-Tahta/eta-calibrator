@@ -109,6 +109,7 @@ ApplicationWindow {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
+                    console.log(bridge.device)
                     messageText.visible = false
                     bridge.runCalibrator()
                     timer.stop()
@@ -204,7 +205,7 @@ ApplicationWindow {
 
     function initialize() {
         var devList = bridge.getDeviceList()
-
+        console.log(devList)
         if (devList.length > 0) {
 
             var devNo = []
@@ -222,11 +223,11 @@ ApplicationWindow {
                     if (sName[1].toLowerCase().indexOf("touch") != -1) {
                         main.hasTouchScreen = true
                         deviceList.visible = false
-                        bridge.device = sNum[i]
+                        bridge.device = sNum[1]
                     } else if (sName[1].toLowerCase().indexOf("tablet") != -1) {
                         main.hasTouchScreen = true
                         deviceList.visible = false
-                        bridge.device = sNum[i]
+                        bridge.device = sNum[1]
                     } else{
                         main.hasTouchScreen = false
                         deviceList.visible = true
