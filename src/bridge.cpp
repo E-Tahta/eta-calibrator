@@ -81,8 +81,10 @@ void Bridge::runCalibrator()
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
     env.insert("LC_ALL","C");
     process.setEnvironment(env.toStringList());
-    process.start(QString(CALIBRATOR) + " --device " + m_device + " --output-filename "
-                  + QString(TEMPORARY_FILE));
+    process.start(QString(CALIBRATOR)
+                  + " --device " + m_device
+                  + " --misclick 0"
+                  + " --output-filename " + QString(TEMPORARY_FILE));
     process.waitForFinished(-1);
     process.readAllStandardOutput();
 
