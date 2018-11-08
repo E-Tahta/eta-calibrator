@@ -1,3 +1,9 @@
+eta-calibrator (0.1.3) unstable; urgency=medium
+
+  * Fix build dependency add libusb-dev
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Thu, 08 Nov 2018 14:42:35 +0300
+
 eta-calibrator (0.1.2) unstable; urgency=medium
 
   [ Yunusemre Şentürk ]
